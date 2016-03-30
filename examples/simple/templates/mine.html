@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{ name }} - Development</title>
+    </head>
+    <body>
+        <button type="button" onClick="doTalk()">Speak</button>
+        <div id="target"></div>
+        <script src="{{ bundlePath }}"></script>
+        <script type="text/javascript">
+            var target = document.getElementById("target");
+            function doTalk() {
+                {{ name }}.talk();
+                target.innerHTML = "I have spoken in the console."
+            }
+        </script>
+    </body>
+</html>

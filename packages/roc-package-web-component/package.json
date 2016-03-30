@@ -1,0 +1,38 @@
+{
+  "name": "roc-package-web-component",
+  "version": "1.0.0-alpha.0",
+  "description": "Package providing component support through Webpack & Babel for Roc",
+  "main": "lib/index.js",
+  "bin": "bin/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "webpack",
+    "babel",
+    "component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rocjs/roc-package-web-component.git"
+  },
+  "author": "VG",
+  "license": "MIT",
+  "dependencies": {
+    "roc": "^1.0.0-rc",
+    "roc-package-module": "^1.0.0-alpha",
+    "roc-package-webpack-web": "^1.0.0-alpha"
+  },
+  "devDependencies": {
+    "babel-eslint": "~5.0.0",
+    "eslint": "~1.10.3",
+    "eslint-config-vgno": "~5.0.0"
+  }
+}
