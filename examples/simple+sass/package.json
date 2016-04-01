@@ -1,0 +1,16 @@
+{
+  "name": "roc-package-module-test",
+  "version": "1.0.0",
+  "description": "Test of roc-package-module",
+  "main": "build/es5/index.js",
+  "jsnext:main": "build/es6/index.js",
+  "scripts": {
+      "dev": "roc-package-web-component-dev dev --build-name hest"
+  },
+  "author": "VG",
+  "license": "MIT",
+  "devDependencies": {
+    "roc-package-web-component-dev": "*",
+    "roc-plugin-style-sass": "^1.0.0-alpha"
+  }
+}
