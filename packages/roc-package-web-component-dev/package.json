@@ -10,7 +10,8 @@
   },
   "files": [
     "bin",
-    "lib"
+    "lib",
+    "templates"
   ],
   "keywords": [
     "roc",
