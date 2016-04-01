@@ -4,6 +4,9 @@
   "description": "Test of roc-package-module",
   "main": "build/es5/index.js",
   "jsnext:main": "build/es6/index.js",
+  "scripts": {
+      "dev": "roc-package-web-component-dev dev --build-name hest"
+  },
   "author": "VG",
   "license": "MIT",
   "devDependencies": {

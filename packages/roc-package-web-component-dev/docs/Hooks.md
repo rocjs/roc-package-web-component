@@ -128,7 +128,7 @@ __Expected return value:__ _Nothing_
 
 Used to create the final Webpack configuration object.
 
-__Initial value:__ `{"buildConfig":{}}`  
+__Initial value:__ `{}`  
 __Expected return value:__ `{}`
 
 #### Arguments
