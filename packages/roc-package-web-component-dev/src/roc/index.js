@@ -17,7 +17,6 @@ export default {
     actions: {
         webpack: {
             description: 'Adds support for component builds.',
-            extension: 'roc-package-webpack-dev',
             hook: 'build-webpack',
             action: () => builder
         }
