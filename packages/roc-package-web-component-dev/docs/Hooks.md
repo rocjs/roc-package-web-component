@@ -35,12 +35,6 @@ Hook point for adding code that runs before the clean command is invoked.
 __Initial value:__ _Nothing_  
 __Expected return value:__ `[String]`
 
-#### Arguments
-
-| Name     | Description                                    | Type |
-| -------- | ---------------------------------------------- | ---- |
-| settings | The settings object that is received from Roc. | `{}` |
-
 ### run-build-command
 
 Use to add things that should react to the build command being called.
@@ -111,6 +105,8 @@ __Expected return value:__ _Nothing_
 | targets | Will always be `["web"]`. | `[String]` |
 
 ### server-started
+
+Runs when the dev server has started.
 
 __Initial value:__ _Nothing_  
 __Expected return value:__ _Nothing_
