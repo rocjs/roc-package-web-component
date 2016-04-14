@@ -29,6 +29,7 @@
   "license": "MIT",
   "dependencies": {
     "koa": "~1.1.1",
+    "koa-static": "~2.0.0",
     "nunjucks": "~2.1.0",
     "roc": "^1.0.0-rc",
     "roc-package-webpack-dev": "^1.0.0-alpha",

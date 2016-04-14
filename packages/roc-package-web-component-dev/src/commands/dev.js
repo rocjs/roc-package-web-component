@@ -1,39 +1,27 @@
-import path from 'path';
-import { getSettings, getAbsolutePath } from 'roc';
+import { getSettings } from 'roc';
 import koa from 'koa';
-import nunjucks from 'nunjucks';
+import serve from 'koa-static';
 
 import { invokeHook } from '../roc/util';
+
+import nunjucksRendering from './nunjucks';
 
 export default async function dev(rocCommandObject) {
     await invokeHook('run-dev-command', ['web']);
 
-    const { output, name } = getSettings('build');
-
-    // Read the webpack.stats.json
-    const stats = require(path.join(getAbsolutePath(output.web), 'webpack-stats.json'));
-
-    const templatePath = rocCommandObject.configObject.settings.dev.template.path ||
-        path.join(__dirname, '..', '..', 'templates');
-
-    nunjucks.configure(getAbsolutePath(templatePath), {
-        watch: true
-    });
-
     const server = koa();
 
-    server.use(function *() {
-        this.body = nunjucks.render(rocCommandObject.configObject.settings.dev.template.name, {
-            name,
-            bundlePath: stats.script
-        });
-    });
+    // Load eventual directories to serve
+    for (const servePath of rocCommandObject.configObject.settings.dev.serve) {
+        server.use(serve(servePath));
+    }
+
+    // Add template support through Nunjucks
+    server.use(nunjucksRendering());
 
     const { demoPort } = getSettings('dev');
-
     server.listen(demoPort);
 
     console.log('Demo server started on ' + demoPort);
-
     invokeHook('server-started', demoPort, '/');
 }
