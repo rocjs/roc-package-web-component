@@ -23,7 +23,7 @@ export default {
     },
     hooks: {
         'server-started': {
-
+            description: 'Runs when the dev server has started.',
             arguments: [{
                 name: 'port',
                 validation: isInteger,

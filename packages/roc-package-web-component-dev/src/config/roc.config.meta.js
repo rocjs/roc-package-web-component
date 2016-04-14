@@ -31,10 +31,10 @@ const meta = {
             },
             dev: {
                 template: {
-                    path: isPath,
-                    name: isString
+                    path: isPath
                 },
-                demoPort: isInteger
+                demoPort: isInteger,
+                serve: isArray(isString)
             }
         },
 
@@ -53,11 +53,11 @@ const meta = {
             dev: {
                 template: {
                     path: 'Path to a directory where the template can be found, can be both relative based on ' +
-                        'current working directory or absolute.',
-                    name: 'The name of the templates. Uses nunjucks and two variables are available, ' +
+                        'current working directory or absolute. Uses nunjucks and two variables are available, ' +
                         '"name" and "bundlePath".'
                 },
-                demoPort: 'The port that the demo server starts on.'
+                demoPort: 'The port that the demo server starts on.',
+                serve: 'What folders that the development server should expose.'
             }
         }
     },
@@ -74,15 +74,17 @@ const meta = {
         },
         dev: {
             arguments: [],
-            settings: true,
+            settings: ['build', 'dev'],
             help: `
             Will start a demo server that will load the component.
 
             By default an internal template will be used but it can easily be changed. Important to note when changing the template is that http://mozilla.github.io/nunjucks/ is used.
 
             Two template variables is available:
-              projectName   The name of the project, can be used to display <title> and run a JavaScript function.
-              bundlePath    The bundle path, used to add the script to the template.`
+            \`\`\`
+            name   The name of the project, can be used to display <title> and run a JavaScript function.
+            bundlePath    The bundle path, used to add the script to the template.
+            \`\`\``
         }
     }
 };

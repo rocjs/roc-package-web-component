@@ -23,10 +23,10 @@ const config = {
 
         dev: {
             template: {
-                path: '',
-                name: 'development.html'
+                path: ''
             },
-            demoPort: 3002
+            demoPort: 3002,
+            serve: []
         }
     },
 
