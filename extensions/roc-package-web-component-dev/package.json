@@ -1,0 +1,52 @@
+{
+  "name": "roc-package-web-component-dev",
+  "version": "1.0.0-beta.0",
+  "description": "Package providing component support through Webpack & Babel for Roc (Development)",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "lib",
+    "templates"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "webpack",
+    "roc-dev",
+    "babel",
+    "component"
+  ],
+  "repository": "https://github.com/rocjs/roc-package-web-component/tree/master/extensions/roc-package-web-component-dev",
+  "author": "Verdens Gang AS",
+  "contributors": [{
+    "name": "Gustaf Dalemar"
+  }],
+  "license": "MIT",
+  "dependencies": {
+    "koa": "~1.1.1",
+    "koa-static": "~2.0.0",
+    "nunjucks": "~2.1.0",
+    "roc": "^1.0.0-rc",
+    "roc-package-webpack-dev": "^1.0.0-beta",
+    "roc-package-web-component": "^1.0.0-beta",
+    "roc-package-webpack-web-dev": "^1.0.0-beta",
+    "roc-package-module-dev": "^1.0.0-beta",
+    "roc-plugin-browsersync": "^1.0.0-beta",
+    "roc-plugin-style-css": "^1.0.0-beta"
+  },
+  "devDependencies": {
+    "babel-eslint": "~6.1.2",
+    "eslint": "~3.0.1",
+    "eslint-config-airbnb-base": "~4.0.0",
+    "eslint-plugin-babel": "~3.3.0",
+    "eslint-plugin-import": "~1.10.2"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}
