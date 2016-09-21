@@ -31,13 +31,13 @@
     "koa": "~1.1.1",
     "koa-static": "~2.0.0",
     "nunjucks": "~2.1.0",
-    "roc": "^1.0.0-rc",
-    "roc-package-webpack-dev": "^1.0.0-alpha",
-    "roc-package-web-component": "^1.0.0-alpha",
-    "roc-package-webpack-web-dev": "^1.0.0-alpha",
-    "roc-package-module-dev": "^1.0.0-alpha",
-    "roc-plugin-browsersync": "^1.0.0-alpha",
-    "roc-plugin-style-css": "^1.0.0-alpha"
+    "roc": "1.0.0-rc.10",
+    "roc-package-webpack-dev": "1.0.0-alpha.11",
+    "roc-package-web-component": "1.0.0-alpha.4",
+    "roc-package-webpack-web-dev": "1.0.0-alpha.7",
+    "roc-package-module-dev": "1.0.0-alpha.6",
+    "roc-plugin-browsersync": "1.0.0-alpha.3",
+    "roc-plugin-style-css": "1.0.0-alpha.6"
   },
   "devDependencies": {
     "babel-eslint": "~5.0.0",
