@@ -7,13 +7,13 @@ import { invokeHook } from '../roc/util';
 
 import nunjucksRendering from './nunjucks';
 
-export default async function dev(rocCommandObject) {
+export default async function dev(commandObject) {
     await invokeHook('run-dev-command', ['web']);
 
     const server = koa();
 
     // Load eventual directories to serve
-    for (const servePath of rocCommandObject.context.config.settings.dev.serve) {
+    for (const servePath of commandObject.context.config.settings.dev.serve) {
         server.use(serve(servePath));
     }
 
