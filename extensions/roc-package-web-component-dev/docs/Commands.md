@@ -1,16 +1,18 @@
 # Commands for `roc-package-web-component-dev`
 
 ## General Information
-All commands can be called with some additional options as can be seen below.
+All commands can be called with some additional options illustrated in the table below.
 
 ### General options
-| Name            | Description                                                                                                   | Required |
-| --------------- | ------------------------------------------------------------------------------------------------------------- | -------- |
-| -c, --config    | Path to configuration file, will default to roc.config.js in current working directory.                       | No       |
-| -d, --directory | Path to working directory, will default to the current working directory. Can be either absolute or relative. | No       |
-| -h, --help      | Output usage information.                                                                                     | No       |
-| -V, --verbose   | Enable verbose mode.                                                                                          | No       |
-| -v, --version   | Output version number.                                                                                        | No       |
+
+| Name                  | Description                                    | Required |
+| --------------------- | ---------------------------------------------- | -------- |
+| -b, --better-feedback | Enables source-map-support and loud-rejection. | No       |
+| -c, --config          | Path to configuration file.                    | No       |
+| -d, --directory       | Path to working directory.                     | No       |
+| -h, --help            | Output usage information.                      | No       |
+| -V, --verbose         | Enable verbose mode.                           | No       |
+| -v, --version         | Output version number.                         | No       |
 
 ## Commands
 * [development](#development)
@@ -38,15 +40,16 @@ roc development build [targets]
 ```
 
 #### Arguments
-| Name    | Description                                                                           | Default | Type | Required | Can be empty |
-| ------- | ------------------------------------------------------------------------------------- | ------- | ---- | -------- | ------------ |
-| targets | For what targets the project should be built for, overrides the settings if provided. |         |      | No       | Yes          |
+
+| Name    | Description                                                                      | Default | Type                    | Required | Can be empty |
+| ------- | -------------------------------------------------------------------------------- | ------- | ----------------------- | -------- | ------------ |
+| targets | The targets the project should be built for, overrides the settings if provided. |         | `[/^web$|^es5$|^es6$/]` | No       | Yes          |
 
 ####  Settings options
 * [build](/Users/gustaf/VG/public/roc-package/roc-package-web-component/extensions/roc-package-web-component-dev/docs/Settings.md#build)
 
 ####  Defined by extensions
-roc-abstract-package-base-dev, roc-package-module-dev, roc-package-web-component-dev
+roc-abstract-package-base-dev, roc-package-module-dev, roc-package-webpack-dev, roc-package-web-component-dev
 
 ### clean
 __Cleans the current project.__
@@ -73,8 +76,8 @@ By default an internal template will be used but it can easily be changed. Impor
 
 Two template variables is available:
 ```
-name   The name of the project, can be used to display <title> and run a JavaScript function.
-bundlePath    The bundle path, used to add the script to the template.
+name        The name of the project, can be used to display <title> and run a JavaScript function.
+bundlePath  The bundle path, used to add the script to the template.
 ```
 
 ####  Settings options
@@ -82,7 +85,7 @@ bundlePath    The bundle path, used to add the script to the template.
 * [dev](/Users/gustaf/VG/public/roc-package/roc-package-web-component/extensions/roc-package-web-component-dev/docs/Settings.md#dev)
 
 ####  Defined by extensions
-roc-abstract-package-base-dev, roc-package-module-dev, roc-package-web-component-dev
+roc-abstract-package-base-dev, roc-package-module-dev, roc-package-webpack-dev, roc-package-web-component-dev
 
 ## meta
 __Meta commands__
@@ -101,13 +104,14 @@ roc meta docs
 ```
 
 #### Command options
-| Name            | Description | Default        | Type | Required | Can be empty |
-| --------------- | ----------- | -------------- | ---- | -------- | ------------ |
-| --hide-commands |             |                |      | No       | Yes          |
-| --html          |             | `false`        |      | No       | Yes          |
-| --markdown      |             | `true`         |      | No       | Yes          |
-| --mode          |             | `"github.com"` |      | No       | Yes          |
-| --output        |             | `"docs"`       |      | No       | Yes          |
+
+| Name       | Description                                                   | Default        | Type                                                              | Required | Can be empty |
+| ---------- | ------------------------------------------------------------- | -------------- | ----------------------------------------------------------------- | -------- | ------------ |
+| --html     | If HTML should be generated. (Not supported yet)              | `false`        | `Boolean`                                                         | No       |              |
+| --markdown | If markdown should be generated.                              | `true`         | `Boolean`                                                         | No       |              |
+| --mode     | The platform that is to be used, for link generation.         | `"github.com"` | `/github\.com|nodejs\.org|bitbucket\.org|ghost\.org|gitlab\.com/` | No       |              |
+| --output   | A directory to place the generated documentation inside of.   | `"docs"`       | `String`                                                          | No       | No           |
+| --project  | If the projects configuration and actions should be included. | `false`        | `Boolean`                                                         | No       |              |
 
 ####  Defined by extensions
 roc

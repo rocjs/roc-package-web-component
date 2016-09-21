@@ -8,8 +8,8 @@ __Version__: ~1.12.2
 __Extension__: roc-package-webpack-dev  
 __Custom resolve function__:  No  
 
-## Uses
-Nothing is listed as used.
-
 ## Requires
 Nothing is required.
+
+## Uses
+Nothing is listed as used.
