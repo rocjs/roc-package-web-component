@@ -34,7 +34,7 @@
     "roc-package-webpack-web-dev": "1.0.0-beta.1",
     "roc-package-module-dev": "1.0.0-beta.1",
     "roc-plugin-browsersync": "1.0.0-beta.1",
-    "roc-plugin-style-css": "1.0.0-beta.1"
+    "roc-plugin-style-css": "1.0.0-beta.2"
   },
   "devDependencies": {
     "babel-eslint": "~6.1.2",
