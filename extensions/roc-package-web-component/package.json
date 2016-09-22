@@ -1,6 +1,6 @@
 {
   "name": "roc-package-web-component",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "Package providing component support through Webpack & Babel for Roc",
   "main": "lib/index.js",
   "scripts": {
@@ -19,9 +19,11 @@
   ],
   "repository": "https://github.com/rocjs/roc-package-web-component/tree/master/extensions/roc-package-web-component",
   "author": "Verdens Gang AS",
-  "contributors": [{
-    "name": "Gustaf Dalemar"
-  }],
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "roc": "1.0.0-rc.11",
