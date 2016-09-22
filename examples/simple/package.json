@@ -7,7 +7,7 @@
   "author": "VG",
   "license": "MIT",
   "scripts": {
-      "dev": "roc-package-web-component-dev dev --build-name hest --dev-template-path templates"
+      "dev": "roc dev --build-name hest --dev-template-path templates"
   },
   "devDependencies": {
     "roc-package-web-component-dev": "*"
