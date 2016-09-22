@@ -18,6 +18,7 @@ export default function nunjucksRendering() {
         watch: true,
     });
 
+    // eslint-disable-next-line
     return function* demoRenderer() {
         const trailingSlash = this.path[this.path.length - 1] === '/';
         const templateFile = trailingSlash ?
