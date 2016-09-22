@@ -31,7 +31,6 @@
     "nunjucks": "~2.1.0",
     "roc": "1.0.0-rc.11",
     "roc-package-webpack-dev": "1.0.0-beta.1",
-    "roc-package-web-component": "1.0.0-beta.1",
     "roc-package-webpack-web-dev": "1.0.0-beta.1",
     "roc-package-module-dev": "1.0.0-beta.1",
     "roc-plugin-browsersync": "1.0.0-beta.1",
