@@ -1,16 +1,16 @@
 export default {
     settings: {
         build: {
-            targets: ['web', 'es5', 'es6'],
+            targets: ['web', 'cjs', 'esm'],
             input: {
                 web: 'src/index.js',
-                es5: 'src',
-                es6: 'src',
+                cjs: 'src',
+                esm: 'src',
             },
             output: {
                 web: 'build/web',
-                es5: 'build/es5',
-                es6: 'build/es6',
+                cjs: 'build/cjs',
+                esm: 'build/esm',
             },
             libraryTarget: 'umd',
             name: undefined,
