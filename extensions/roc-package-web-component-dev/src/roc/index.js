@@ -80,7 +80,7 @@ export default {
                 override: 'roc-abstract-package-base-dev',
                 arguments: {
                     targets: {
-                        validator: isArray(/^web$|^es5$|^es6$/),
+                        validator: isArray(/^web$|^cjs$|^esm$/),
                     },
                 },
             },

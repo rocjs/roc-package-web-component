@@ -17,7 +17,7 @@ export default {
             },
             targets: {
                 override: 'roc-abstract-package-base-dev',
-                validator: required(notEmpty(isArray(/^web$|^es5$|^es6$/i))),
+                validator: required(notEmpty(isArray(/^web$|^cjs$|^esm$/i))),
             },
             input: {
                 __meta: {
@@ -27,11 +27,11 @@ export default {
                     description: 'What file to use as entry file.',
                     validator: required(notEmpty(isPath)),
                 },
-                es5: {
+                cjs: {
                     description: 'What directory to build from.',
                     validator: required(notEmpty(isPath)),
                 },
-                es6: {
+                esm: {
                     description: 'What directory to build from.',
                     validator: required(notEmpty(isPath)),
                 },

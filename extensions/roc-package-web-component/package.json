@@ -26,9 +26,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "roc": "1.0.0-rc.11",
-    "roc-package-module": "1.0.0-beta.1",
-    "roc-package-webpack-web": "1.0.0-beta.1"
+    "roc": "^1.0.0-rc.12",
+    "roc-package-module": "^1.0.0-beta.2",
+    "roc-package-webpack-web": "^1.0.0-beta.1"
   },
   "devDependencies": {
     "babel-eslint": "~6.1.2",
