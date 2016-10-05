@@ -10,12 +10,12 @@
   * [run-dev-command](#run-dev-command)
 * [roc-package-module-dev](#roc-package-module-dev)
   * [after-clean](#after-clean-1)
-  * [babel-load-plugins](#babel-load-plugins)
-  * [babel-load-presets](#babel-load-presets)
+  * [babel-config](#babel-config)
 * [roc-package-web-component-dev](#roc-package-web-component-dev)
   * [run-dev-command](#run-dev-command-1)
   * [server-started](#server-started)
 * [roc-package-webpack-dev](#roc-package-webpack-dev)
+  * [babel-config](#babel-config-1)
   * [build-webpack](#build-webpack)
   * [create-watchers](#create-watchers)
   * [get-webpack-targets](#get-webpack-targets)
@@ -92,35 +92,22 @@ __Expected return value:__ `[String]`
 
 #### Arguments
 
-| Name   | Description                                       | Type     | Required | Can be empty |
-| ------ | ------------------------------------------------- | -------- | -------- | ------------ |
-| target | The target, will by default be either es5 or es6. | `String` | No       | Yes          |
+| Name   | Description                                           | Type     | Required | Can be empty |
+| ------ | ----------------------------------------------------- | -------- | -------- | ------------ |
+| target | The target, will by default be either "cjs" or "esm". | `String` | No       | Yes          |
 
-### babel-load-plugins
+### babel-config
 
-Expected to return a concatenated array with the final presets to use.
+Used to create a Babel configuration to be used.
 
-__Initial value:__ `[]`  
-__Expected return value:__ `[String]`
-
-#### Arguments
-
-| Name   | Description                                       | Type     | Required | Can be empty |
-| ------ | ------------------------------------------------- | -------- | -------- | ------------ |
-| target | The target, will by default be either es5 or es6. | `String` | No       | Yes          |
-
-### babel-load-presets
-
-Expected to return a presets to add to the array of presets to use.
-
-__Initial value:__ `[]`  
-__Expected return value:__ `[String]`
+__Initial value:__ `{}`  
+__Expected return value:__ `{}`
 
 #### Arguments
 
-| Name   | Description                                       | Type     | Required | Can be empty |
-| ------ | ------------------------------------------------- | -------- | -------- | ------------ |
-| target | The target, will by default be either es5 or es6. | `String` | No       | Yes          |
+| Name   | Description                                           | Type     | Required | Can be empty |
+| ------ | ----------------------------------------------------- | -------- | -------- | ------------ |
+| target | The target, will by default be either "cjs" or "esm". | `String` | No       | Yes          |
 
 ## roc-package-web-component-dev
 
@@ -152,6 +139,19 @@ __Expected return value:__ _Nothing_
 | path | The path that the server has started on. | `Filepath` | No       | Yes          |
 
 ## roc-package-webpack-dev
+
+### babel-config
+
+Used to create a Babel configuration to be used in the Webpack build.
+
+__Initial value:__ `{}`  
+__Expected return value:__ `{}`
+
+#### Arguments
+
+| Name   | Description              | Type     | Required | Can be empty |
+| ------ | ------------------------ | -------- | -------- | ------------ |
+| target | The target that is used. | `String` | No       | Yes          |
 
 ### build-webpack
 

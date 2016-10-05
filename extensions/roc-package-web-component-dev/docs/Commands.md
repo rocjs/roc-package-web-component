@@ -43,7 +43,7 @@ roc development build [targets]
 
 | Name    | Description                                                                      | Default | Type                    | Required | Can be empty |
 | ------- | -------------------------------------------------------------------------------- | ------- | ----------------------- | -------- | ------------ |
-| targets | The targets the project should be built for, overrides the settings if provided. |         | `[/^web$|^es5$|^es6$/]` | No       | Yes          |
+| targets | The targets the project should be built for, overrides the settings if provided. |         | `[/^web$|^cjs$|^esm$/]` | No       | Yes          |
 
 ####  Settings options
 * [build](/Users/gustaf/VG/public/roc-package/roc-package-web-component/extensions/roc-package-web-component-dev/docs/Settings.md#build)
