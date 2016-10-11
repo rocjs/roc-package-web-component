@@ -23,7 +23,9 @@ export default function nunjucksRendering() {
         const templateVariables = {
             name,
             bundlePath: stats.script,
-            ...template.variables,
+            customVariables: {
+                ...template.customVariables,
+            },
         };
         const trailingSlash = this.path[this.path.length - 1] === '/';
         const templateFile = trailingSlash ?

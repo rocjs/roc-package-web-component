@@ -22,7 +22,7 @@ export default {
         dev: {
             template: {
                 path: undefined,
-                variables: {},
+                customVariables: {},
             },
             demoPort: 3002,
             serve: [],

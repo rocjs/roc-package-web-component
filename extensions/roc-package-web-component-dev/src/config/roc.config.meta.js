@@ -56,8 +56,9 @@ export default {
                         '"name" and "bundlePath".',
                     validator: notEmpty(isPath),
                 },
-                variables: {
-                    description: 'An object representing variables to expose to the dev template. Will be merged with the default template variables.',
+                customVariables: {
+                    description: 'An object representing custom variables to expose to the dev template. The properties of ' +
+                        'the object can be referenced in the template by using {{ customVariables.myPropertyName }}.',
                     validator: required(isObject()),
                 },
             },
