@@ -57,7 +57,7 @@ export default {
                     validator: notEmpty(isPath),
                 },
                 variables: {
-                    description: 'An array of variables to expose to the dev template. Will be merged with the default template variables.',
+                    description: 'An object representing variables to expose to the dev template. Will be merged with the default template variables.',
                     validator: required(isObject()),
                 },
             },
