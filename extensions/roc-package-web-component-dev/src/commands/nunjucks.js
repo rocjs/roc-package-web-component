@@ -20,15 +20,16 @@ export default function nunjucksRendering() {
 
     // eslint-disable-next-line
     return function* demoRenderer() {
+        const templateVariables = Object.assign({
+            name,
+            bundlePath: stats.script,
+        }, template.variables);
         const trailingSlash = this.path[this.path.length - 1] === '/';
         const templateFile = trailingSlash ?
             `${this.path.substring(1)}index.html` :
             this.path.substring(1);
         try {
-            this.body = nunjucks.render(templateFile, {
-                name,
-                bundlePath: stats.script,
-            });
+            this.body = nunjucks.render(templateFile, templateVariables);
         } catch (err) {
             this.status = 404;
         }
