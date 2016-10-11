@@ -20,10 +20,11 @@ export default function nunjucksRendering() {
 
     // eslint-disable-next-line
     return function* demoRenderer() {
-        const templateVariables = Object.assign({
+        const templateVariables = {
             name,
             bundlePath: stats.script,
-        }, template.variables);
+            ...template.variables,
+        };
         const trailingSlash = this.path[this.path.length - 1] === '/';
         const templateFile = trailingSlash ?
             `${this.path.substring(1)}index.html` :
