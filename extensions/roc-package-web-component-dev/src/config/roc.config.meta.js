@@ -59,7 +59,7 @@ export default {
                 customVariables: {
                     description: 'An object representing custom variables to expose to the dev template. The properties of ' +
                         'the object can be referenced in the template by using {{ customVariables.myPropertyName }}.',
-                    validator: required(isObject()),
+                    validator: required(isObject({ unmanaged: true })),
                 },
             },
             demoPort: {
