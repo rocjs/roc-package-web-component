@@ -4,6 +4,7 @@ import {
     isArray,
     isString,
     isInteger,
+    isObject,
     required,
     notEmpty,
 } from 'roc/validators';
@@ -54,6 +55,11 @@ export default {
                         'current working directory or absolute. Uses nunjucks and two variables are available, ' +
                         '"name" and "bundlePath".',
                     validator: notEmpty(isPath),
+                },
+                customVariables: {
+                    description: 'An object representing custom variables to expose to the dev template. The properties of ' +
+                        'the object can be referenced in the template by using {{ customVariables.myPropertyName }}.',
+                    validator: required(isObject({ unmanaged: true })),
                 },
             },
             demoPort: {
