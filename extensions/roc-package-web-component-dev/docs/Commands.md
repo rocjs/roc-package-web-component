@@ -41,12 +41,12 @@ roc development build [targets]
 
 #### Arguments
 
-| Name    | Description                                                                      | Default | Type                    | Required | Can be empty |
-| ------- | -------------------------------------------------------------------------------- | ------- | ----------------------- | -------- | ------------ |
-| targets | The targets the project should be built for, overrides the settings if provided. |         | `[/^web$|^cjs$|^esm$/]` | No       | Yes          |
+| Name    | Description                                                                      | Default | Type                         | Required | Can be empty |
+| ------- | -------------------------------------------------------------------------------- | ------- | ---------------------------- | -------- | ------------ |
+| targets | The targets the project should be built for, overrides the settings if provided. |         | `Array(/^web$|^cjs$|^esm$/)` | No       | Yes          |
 
 ####  Settings options
-* [build](/Users/gustaf/VG/public/roc-package/roc-package-web-component/extensions/roc-package-web-component-dev/docs/Settings.md#build)
+* [build](docs/Settings.md#build)
 
 ####  Defined by extensions
 roc-abstract-package-base-dev, roc-package-module-dev, roc-package-webpack-dev, roc-package-web-component-dev
@@ -59,7 +59,7 @@ roc development clean
 ```
 
 ####  Settings options
-* [build](/Users/gustaf/VG/public/roc-package/roc-package-web-component/extensions/roc-package-web-component-dev/docs/Settings.md#build)
+* [build](docs/Settings.md#build)
 
 ####  Defined by extensions
 roc-abstract-package-base-dev
@@ -81,8 +81,8 @@ bundlePath  The bundle path, used to add the script to the template.
 ```
 
 ####  Settings options
-* [build](/Users/gustaf/VG/public/roc-package/roc-package-web-component/extensions/roc-package-web-component-dev/docs/Settings.md#build)
-* [dev](/Users/gustaf/VG/public/roc-package/roc-package-web-component/extensions/roc-package-web-component-dev/docs/Settings.md#dev)
+* [build](docs/Settings.md#build)
+* [dev](docs/Settings.md#dev)
 
 ####  Defined by extensions
 roc-abstract-package-base-dev, roc-package-module-dev, roc-package-webpack-dev, roc-package-web-component-dev
